@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Премиум сайт знакомств</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Поиск</a></li>
+                <li><a href="#">Сообщения</a></li>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="swipe">
+            <div class="card" id="card">
+                <div class="card-content">
+                    <img src="https://get.wallhere.com/photo/face-women-model-portrait-window-long-hair-blue-eyes-brunette-photography-dress-Lily-C-hair-Person-skin-Raisa-girl-beauty-smile-eye-woman-lady-bride-photograph-blond-hairstyle-portrait-photography-photo-shoot-brown-hair-118927.jpg" alt="Фото пользователя" id="userImage">
+                    <h2 id="userName">Имя Пользователя</h2>
+                    <p id="userAge">Возраст: 25</p>
+                    <p id="userBio">О себе: Интересный текст о пользователе...</p>
+                </div>
+            </div>
+            <div id="swipeOverlay"></div>
+        </section>
+
+        <div id="profileModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalName">Имя Пользователя</h2>
+                <p id="modalAge">Возраст: 25</p>
+                <p id="modalBio">О себе: Интересный текст о пользователе...</p>
+                <button id="messageButton">Написать сообщение</button>
+                <button id="showMoreButton">Показать больше</button>
+            </div>
+        </div>
+
+        <button id="refreshButton" class="actionButton">🔄</button>
+        <button id="themeToggle" class="actionButton">🌙</button>
+
+        <div id="filters" class="filters">
+            <h3>Фильтры поиска</h3>
+            <label for="ageRange">Возраст:</label>
+            <input type="range" id="ageRange" min="18" max="99" value="25">
+            <span id="ageValue">25</span>
+
+            <label for="interests">Интересы:</label>
+            <select id="interests" multiple>
+                <option value="music">Музыка</option>
+                <option value="sports">Спорт</option>
+                <option value="travel">Путешествия</option>
+                <option value="cooking">Кулинария</option>
+            </select>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Премиум сайт знакомств. Все права защищены.</p>
+    </footer>
+
+    <button id="likeButton" class="swipeButton like">
+        <img src="like-icon.png" alt="Like">
+    </button>
+    <button id="dislikeButton" class="swipeButton dislike">
+        <img src="dislike-icon.png" alt="Dislike">
+    </button>
+
+    <div id="chatPanel" class="chatPanel">
+        <h3>Сообщения</h3>
+        <div id="messages"></div>
+        <input type="text" id="messageInput" placeholder="Введите сообщение...">
+        <button id="sendMessage">Отправить</button>
+    </div>
+
+    <div id="historyPanel" class="historyPanel">
+        <h3>История действий</h3>
+        <div id="history"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
