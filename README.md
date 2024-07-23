@@ -26,7 +26,7 @@
 1. **Клонируйте репозиторий:**
 
    ```bash
-   git clone https://github.com/your-github-username/your-repository-name.git
+   git clone и тут лэнь
 Перейдите в директорию проекта:
    ```bash
    cd https://github.com/Fecurity123/Tinder---2.0/
